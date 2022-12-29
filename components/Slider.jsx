@@ -14,7 +14,7 @@ const Slider = ({ slides }) => {
   if (!Array.isArray(slides) || slides.length <= 0) return null;
 
   return (
-    <div className="relative w-full sm:w-[65%] h-96 sm:h-auto mb-4 sm:mb-0 border-4 border-gray-500 rounded-md">
+    <div className="relative w-full sm:w-[65%] h-96 sm:h-auto mb-2 sm:mb-0 border-8 border-gray-500 rounded-md">
       {slides.map(
         (slide, i) =>
           current === i && (
@@ -28,7 +28,7 @@ const Slider = ({ slides }) => {
           )
       )}
 
-      <button className="absolute left-4 top-[50%] flex justify-center items-center p-2 border bg-white/70 rounded-md">
+      <button className="absolute left-4 bottom-[50%] flex justify-center items-center p-2 border bg-white/70 rounded-md">
         <BsArrowLeft
           size={24}
           onClick={prev}
@@ -36,8 +36,8 @@ const Slider = ({ slides }) => {
         />
       </button>
 
-      <div className="absolute left-2 top-2 block p-8 rounded-br-3xl w-4/6 bg-white/60">
-        <p className="text-gray-600 text-lg font-semibold">
+      <div className="absolute left-4 bottom-4 right-4 block p-8 rounded-md bg-black/50">
+        <p className="text-gray-200 text-lg font-semibold">
           <q>
             We deploy services beyond your imagination. Just give KORIS
             a try.
@@ -45,7 +45,7 @@ const Slider = ({ slides }) => {
         </p>
       </div>
 
-      <button className="absolute right-4 top-[50%] flex justify-center items-center p-2 border bg-white/70 rounded-md">
+      <button className="absolute right-4 bottom-[50%] flex justify-center items-center p-2 border bg-white/70 rounded-md">
         <BsArrowRight
           size={24}
           onClick={next}

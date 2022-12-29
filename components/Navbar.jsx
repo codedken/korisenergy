@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
+import {VscMenu} from 'react-icons/vsc';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -60,7 +61,7 @@ const Navbar = () => {
         style={{ color: `${textColor}` }}
         className="block sm:hidden cursor-pointer z-30"
       >
-        {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={20} />}
+        {nav ? <AiOutlineClose size={24} /> : <VscMenu size={20} />}
       </div>
       {/*Mobile Menu */}
       <div
@@ -71,16 +72,16 @@ const Navbar = () => {
         }
       >
         <ul className=" text-white">
-          <li className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-4 text-2xl">
             <Link href="/">Home</Link>
           </li>
-          <li className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-4 text-2xl">
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-4 text-2xl">
             <Link href="/about">About</Link>
           </li>
-          <li className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-4 text-2xl">
             <Link href="/contact">Contact</Link>
           </li>
           <li></li>
