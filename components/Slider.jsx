@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
@@ -15,18 +15,18 @@ const Slider = ({ slides }) => {
 
   return (
     <div className="relative w-full sm:w-[65%] h-96 sm:h-auto mb-2 sm:mb-0 border-8 border-gray-500 rounded-md">
-      {slides.map(
-        (slide, i) =>
-          current === i && (
-            <Image
-              key={i}
-              src={slide.image}
-              fill={true}
-              alt="product"
-              className="w-full h-full object-cover"
-            />
-          )
-      )}
+      <div className="flex ease-in duration-300 w-full h-full">
+        {slides.map((slide, i) => {
+          return current === i && <Image
+            key={i}
+            src={slide.image}
+            fill={true}
+            loading="lazy"
+            alt="product"
+            className="w-full h-full object-cover"
+          />
+        })}
+      </div>
 
       <button className="absolute left-4 bottom-[50%] flex justify-center items-center p-2 border bg-white/70 rounded-md">
         <BsArrowLeft
@@ -36,11 +36,10 @@ const Slider = ({ slides }) => {
         />
       </button>
 
-      <div className="absolute left-4 bottom-4 right-4 block p-8 rounded-md bg-black/50">
-        <p className="text-gray-200 text-lg font-semibold">
+      <div className="absolute left-4 bottom-4 right-4 block p-4 rounded-sm bg-black/50">
+        <p className="text-gray-200 text-base tracking-wider">
           <q>
-            We deploy services beyond your imagination. Just give KORIS
-            a try.
+            We deploy services beyond your imagination. Just give KORIS a try.
           </q>
         </p>
       </div>

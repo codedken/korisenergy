@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import {VscMenu} from 'react-icons/vsc';
+import { VscMenu } from "react-icons/vsc";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -49,8 +49,11 @@ const Navbar = () => {
           <Link href="/about">About</Link>
         </li>
         <Link href="/contact">
-          <button className="border rounded-sm ml-4 py-2 font-bold px-4">
-            <p className="h-5 text-gray-200 text-center">Contact</p>
+          <button
+            style={{ borderColor: `${textColor}` }}
+            className="border hover:bg-gray-100 group rounded-sm ml-4 py-2 font-bold px-4"
+          >
+            <p className="h-5 text-center group-hover:text-gray-800">Contact</p>
           </button>
         </Link>
         <li></li>
@@ -59,7 +62,7 @@ const Navbar = () => {
       <div
         onClick={toggleNav}
         style={{ color: `${textColor}` }}
-        className="block sm:hidden cursor-pointer z-30"
+        className="block sm:hidden cursor-pointer z-[5]"
       >
         {nav ? <AiOutlineClose size={24} /> : <VscMenu size={20} />}
       </div>
