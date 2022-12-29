@@ -48,7 +48,7 @@ const Navbar = () => {
           <Link href="/about">About</Link>
         </li>
         <Link href="/contact">
-          <button className="bg-red-600 rounded-lg ml-4 py-2 font-bold shadow-gray-400 shadow-inner hover:shadow-gray-200 px-4">
+          <button className="border rounded-sm ml-4 py-2 font-bold px-4">
             <p className="h-5 text-gray-200 text-center">Contact</p>
           </button>
         </Link>
