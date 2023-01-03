@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Typical from "react-typical";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const Slider = ({ slides }) => {
@@ -17,14 +18,18 @@ const Slider = ({ slides }) => {
     <div className="relative w-full sm:w-[65%] h-96 sm:h-auto mb-2 sm:mb-0 border-8 border-gray-500 rounded-md">
       <div className="flex ease-in duration-300 w-full h-full">
         {slides.map((slide, i) => {
-          return current === i && <Image
-            key={i}
-            src={slide.image}
-            fill={true}
-            loading="lazy"
-            alt="product"
-            className="w-full h-full object-cover"
-          />
+          return (
+            current === i && (
+              <Image
+                key={i}
+                src={slide.image}
+                fill={true}
+                loading="lazy"
+                alt="product"
+                className="w-full h-full object-cover"
+              />
+            )
+          );
         })}
       </div>
 
@@ -36,11 +41,17 @@ const Slider = ({ slides }) => {
         />
       </button>
 
-      <div className="absolute left-4 bottom-4 right-4 block p-4 rounded-sm bg-black/50">
-        <p className="text-gray-200 text-base tracking-wider">
-          <q>
-            We deploy services beyond your imagination. Just give KORIS a try.
-          </q>
+      <div className="absolute left-4 bottom-4 h-20 right-4 block p-4 rounded-sm bg-black/50">
+        <p className="text-gray-200 font-semibold text-base tracking-wider">
+          <Typical
+            steps={[
+              "We deploy services beyond your imagination. Just give KORIS a try.",
+              1000,
+              "Get comfortable without any fear of power interruption. We got your back",
+              1000,
+            ]}
+            loop={Infinity}
+          />
         </p>
       </div>
 

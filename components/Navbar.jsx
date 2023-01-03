@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
@@ -29,12 +30,17 @@ const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
       className="fixed w-full flex justify-between items-center py-5 px-5 sm:px-32 text-white ease-in duration-300 z-20"
     >
-      <h2
-        style={{ color: `${textColor}` }}
-        className="font-bold text-2xl sm:text-3xl z-50"
-      >
-        <Link href="/">KORISenergy</Link>
-      </h2>
+      <div className="flex items-center justify-center">
+        <Link href="/">
+          <Image src="/korislogo.png" width={40} height={40} alt="Koris Logo" />
+        </Link>
+        <h2
+          style={{ color: `${textColor}` }}
+          className="font-bold text-2xl sm:text-3xl z-50 h-6"
+        >
+          ORIS<span className="italic text-xl">energy</span>
+        </h2>
+      </div>
       <ul
         style={{ color: `${textColor}` }}
         className="hidden sm:flex justify-center items-center"

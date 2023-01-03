@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import Slider from "../components/Slider";
@@ -15,9 +16,9 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-md px-8 py-12 h-80 sm:h-auto w-full sm:w-[35%]">
               <h3 className="text-2xl font-bold mb-4">Living Off-The-Grid</h3>
               <p className="text-base text-gray-500">
-                In Nigeria Within the newly developed Guzape District in the
-                heart of Abuja lies a unique 10-apartment block building,
-                running totally off the grid with a combination
+                With our service, you are guaranteed to live off unreliable
+                power grid and wave goodbye to epileptic power supply. At Koris
+                Energy, we ensure that our clients get maximum satisfaction.
               </p>
 
               <div className="absolute bottom-4 ">
@@ -25,26 +26,33 @@ export default function Home() {
                   You can find us here
                 </h3>
                 <div className="flex gap-4">
-                  <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
-                    <button>
-                      <FaFacebookF size={18} className="text-white" />
-                    </button>
-                  </div>
-                  <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
-                    <button>
-                      <AiOutlineTwitter size={22} className="text-white" />
-                    </button>
-                  </div>
-                  <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
-                    <button>
-                      <AiOutlineInstagram size={22} className="text-white" />
-                    </button>
-                  </div>
+                  <Link target="_blank" href="https://www.twitter.com/kenbuzor">
+                    <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
+                      <button>
+                        <FaFacebookF size={18} className="text-white" />
+                      </button>
+                    </div>
+                  </Link>
+
+                  <Link href="https://www.twitter.com/kenbuzor">
+                    <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
+                      <button>
+                        <AiOutlineTwitter size={22} className="text-white" />
+                      </button>
+                    </div>
+                  </Link>
+                  <Link href="https://www.twitter.com/kenbuzor">
+                    <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
+                      <button>
+                        <AiOutlineInstagram size={22} className="text-white" />
+                      </button>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full relative bg-gray-100 mt-4 sm:px-32 px-6 py-12">
+          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-12">
             <h2 className="text-center text-3xl text-gray-800 font-bold p-4">
               About Us
             </h2>
@@ -60,16 +68,39 @@ export default function Home() {
               generation, distribution, storage and consumption
             </p>
           </div>
-          <div className="w-full relative bg-gray-100 mt-4 sm:px-32 px-6 py-12">
-            <h2 className="text-center text-3xl text-gray-800 font-bold p-4">
-              Contact Us
+          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-12">
+            <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
+              Shoot us an email
             </h2>
-            <div>
-              <input type="text" placeholder="Your name" />
-              <input type="email" placeholder="Your email address" />
-              <input type="text" placeholder="Subject" />
-              <textarea placeholder="start typing message here" />
-            </div>
+            <form className="max-w-[600px] m-auto">
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  className="border shadow-lg p-3"
+                  type="text"
+                  placeholder="Your name"
+                />
+                <input
+                  className="border shadow-lg p-3"
+                  type="email"
+                  placeholder="Your email address"
+                />
+              </div>
+
+              <input
+                className="border shadow-lg p-3 w-full my-2"
+                type="text"
+                placeholder="Subject"
+              />
+              <textarea
+                className="border shadow-lg p-3 w-full"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+              <button className="border rounded-md bg-blue-600 text-white font-bold tracking-wider p-2 mt-2 w-full">
+                SEND
+              </button>
+            </form>
           </div>
         </div>
         <div className="w-full h-96 bg-blue-100 px-4" />
