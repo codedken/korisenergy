@@ -30,16 +30,19 @@ const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
       className="fixed w-full flex justify-between items-center py-5 px-5 sm:px-32 text-white ease-in duration-300 z-20"
     >
-      <div className="flex items-center justify-center">
-        <Link href="/">
-          <Image src="/korislogo.png" width={40} height={40} alt="Koris Logo" />
+      <div className="flex items-center justify-center gap-1">
+        <Link href="/" className="z-50">
+          <Image src="/korislogo.png" width={50} height={50} alt="Koris Logo" />
         </Link>
-        <h2
-          style={{ color: `${textColor}` }}
-          className="font-bold text-2xl sm:text-3xl z-50 h-6"
-        >
-          ORIS<span className="italic text-xl">energy</span>
-        </h2>
+        <div className="h-10 flex flex-col justify-between gap-1">
+          <h2
+            style={{ color: `${textColor}` }}
+            className="font-bold text-xl sm:text-xl z-50 h-4"
+          >
+            KORIS<span className="italic text-xl">energy</span>
+          </h2>
+          <h3 className="font-bold text-lg text-orange-500 sm:text-xl z-50 h-6">SOLUTIONS</h3>
+        </div>
       </div>
       <ul
         style={{ color: `${textColor}` }}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Typical from "react-typical";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const Slider = ({ slides }) => {
@@ -43,15 +42,7 @@ const Slider = ({ slides }) => {
 
       <div className="absolute left-4 bottom-4 h-20 right-4 block p-4 rounded-sm bg-black/50">
         <p className="text-gray-200 font-semibold text-base tracking-wider">
-          <Typical
-            steps={[
-              "We deploy services beyond your imagination. Just give KORIS a try.",
-              1000,
-              "Get comfortable without any fear of power interruption. We got your back",
-              1000,
-            ]}
-            loop={Infinity}
-          />
+          We deploy services beyond your imagination. Just give KORIS a try
         </p>
       </div>
 

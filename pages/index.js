@@ -92,12 +92,12 @@ export default function Home() {
                 placeholder="Subject"
               />
               <textarea
-                className="border shadow-lg p-3 w-full"
+                className="border shadow-lg p-3 w-full rounded-md"
                 cols="30"
                 rows="10"
                 placeholder="Message"
               ></textarea>
-              <button className="border rounded-md bg-blue-600 text-white font-bold tracking-wider p-2 mt-2 w-full">
+              <button className="border rounded-md bg-blue-700 text-white font-bold tracking-wider p-2 w-full">
                 SEND
               </button>
             </form>
