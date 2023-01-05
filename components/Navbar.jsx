@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       style={{ backgroundColor: `${color}` }}
-      className="fixed w-full flex justify-between items-center py-5 px-5 sm:px-32 text-white ease-in duration-300 z-20"
+      className="fixed w-full flex justify-between items-center py-5 px-5 md:px-32 text-white ease-in duration-300 z-20"
     >
       <Link href="/" className="z-50">
         <div className="flex items-center justify-center gap-1">
@@ -37,11 +37,11 @@ const Navbar = () => {
           <div className="h-10 flex flex-col justify-between gap-1">
             <h2
               style={{ color: nav ? `#ffffff` : `${textColor}` }}
-              className="font-bold text-xl sm:text-xl z-50 h-4"
+              className="font-bold text-xl md:text-xl z-50 h-4"
             >
               KORIS<span className="italic text-xl">energy</span>
             </h2>
-            <h3 className="font-bold text-lg text-orange-500 sm:text-xl z-50 h-6">
+            <h3 className="font-bold text-lg text-orange-500 md:text-xl z-50 h-6">
               SOLUTIONS
             </h3>
           </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
       </Link>
       <ul
         style={{ color: `${textColor}` }}
-        className="hidden sm:flex justify-center items-center"
+        className="hidden md:flex justify-center items-center"
       >
         <li className="p-6 font-bold tracking-wide">
           <Link
@@ -92,7 +92,7 @@ const Navbar = () => {
       <div
         onClick={toggleNav}
         style={{ color: nav ? `#ffffff` : `${textColor}` }}
-        className="block sm:hidden cursor-pointer z-[5]"
+        className="block md:hidden cursor-pointer z-[5]"
       >
         {nav ? <AiOutlineClose size={24} /> : <VscMenu size={20} />}
       </div>

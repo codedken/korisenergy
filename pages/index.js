@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <>
       <div>
-        <div className="relative h-screen px-4 sm:px-32 sm:pt-32 pt-20 w-full bg-fixed bg-center bg-cover custom-bg">
+        <div className="relative h-screen px-4 md:px-32 md:pt-32 pt-20 w-full bg-fixed bg-center bg-cover custom-bg">
           {/* Overlay */}
           <div className="absolute top-0 left-0 right-0 bottom-0 h-screen bg-black/75" />
-          <div className="gap-3 w-full sm:h-[70%] sm:flex sm:justify-between">
+          <div className="gap-3 w-full md:h-[70%] md:flex md:justify-between">
             <Slider slides={SliderData} />
-            <div className="relative bg-gray-100 rounded-md px-8 py-12 h-80 sm:h-auto w-full sm:w-[35%]">
+            <div className="relative bg-gray-100 rounded-md px-8 py-12 h-80 md:h-auto w-full md:w-[35%]">
               <h3 className="text-2xl font-bold mb-4">Living Off-The-Grid</h3>
               <p className="text-base text-gray-500">
                 With our service, you are guaranteed to live off unreliable
@@ -53,7 +53,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-8">
+          <div className="w-full relative bg-gray-50 mt-4 md:px-32 px-6 py-8">
             <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
               About Us
             </h2>
@@ -69,7 +69,7 @@ export default function Home() {
               generation, distribution, storage and consumption
             </p>
           </div>
-          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-8">
+          <div className="w-full relative bg-gray-50 mt-4 md:px-32 px-6 py-8">
             <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
               Shoot us an email
             </h2>

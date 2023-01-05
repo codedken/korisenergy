@@ -43,7 +43,7 @@ const Contact = () => {
   };
   return (
     <form onSubmit={sendEmail} className="max-w-[600px] m-auto">
-      <div className="grid sm:grid-cols-2 gap-2">
+      <div className="grid md:grid-cols-2 gap-2">
         <input
           className="border shadow-lg p-3"
           type="text"
