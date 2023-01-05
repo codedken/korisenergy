@@ -15,7 +15,7 @@ const Slider = ({ slides }) => {
 
   return (
     <div className="relative w-full sm:w-[65%] h-96 sm:h-auto mb-2 sm:mb-0 border-8 border-gray-500 rounded-md">
-      <div className="flex ease-in duration-300 w-full h-full">
+      <div className="flex relative ease-in duration-300 w-full h-full">
         {slides.map((slide, i) => {
           return (
             current === i && (
@@ -23,7 +23,7 @@ const Slider = ({ slides }) => {
                 key={i}
                 src={slide.image}
                 fill={true}
-                loading="lazy"
+                priority={true}
                 alt="product"
                 className="w-full h-full object-cover"
               />
@@ -40,7 +40,7 @@ const Slider = ({ slides }) => {
         />
       </button>
 
-      <div className="absolute left-4 bottom-4 h-20 right-4 block p-4 rounded-sm bg-black/50">
+      <div className="absolute left-4 bottom-4 right-4 block p-4 rounded-sm bg-black/50">
         <p className="text-gray-200 font-semibold text-base tracking-wider">
           We deploy services beyond your imagination. Just give KORIS a try
         </p>

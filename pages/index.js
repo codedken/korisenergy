@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
+import Contact from "../components/Contact";
 import Slider from "../components/Slider";
 import { SliderData } from "../components/SliderData";
 
@@ -52,8 +53,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-12">
-            <h2 className="text-center text-3xl text-gray-800 font-bold p-4">
+          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-8">
+            <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
               About Us
             </h2>
             <p className="text-gray-800 text-base tracking-wide">
@@ -68,39 +69,11 @@ export default function Home() {
               generation, distribution, storage and consumption
             </p>
           </div>
-          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-12">
+          <div className="w-full relative bg-gray-50 mt-4 sm:px-32 px-6 py-8">
             <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
               Shoot us an email
             </h2>
-            <form className="max-w-[600px] m-auto">
-              <div className="grid grid-cols-2 gap-2">
-                <input
-                  className="border shadow-lg p-3"
-                  type="text"
-                  placeholder="Your name"
-                />
-                <input
-                  className="border shadow-lg p-3"
-                  type="email"
-                  placeholder="Your email address"
-                />
-              </div>
-
-              <input
-                className="border shadow-lg p-3 w-full my-2"
-                type="text"
-                placeholder="Subject"
-              />
-              <textarea
-                className="border shadow-lg p-3 w-full rounded-md"
-                cols="30"
-                rows="10"
-                placeholder="Message"
-              ></textarea>
-              <button className="border rounded-md bg-blue-700 text-white font-bold tracking-wider p-2 w-full">
-                SEND
-              </button>
-            </form>
+            <Contact />
           </div>
         </div>
         <div className="w-full h-96 bg-blue-100 px-4" />

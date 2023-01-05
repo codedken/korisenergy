@@ -30,32 +30,53 @@ const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
       className="fixed w-full flex justify-between items-center py-5 px-5 sm:px-32 text-white ease-in duration-300 z-20"
     >
-      <div className="flex items-center justify-center gap-1">
-        <Link href="/" className="z-50">
+      <Link href="/" className="z-50">
+        <div className="flex items-center justify-center gap-1">
           <Image src="/korislogo.png" width={50} height={50} alt="Koris Logo" />
-        </Link>
-        <div className="h-10 flex flex-col justify-between gap-1">
-          <h2
-            style={{ color: `${textColor}` }}
-            className="font-bold text-xl sm:text-xl z-50 h-4"
-          >
-            KORIS<span className="italic text-xl">energy</span>
-          </h2>
-          <h3 className="font-bold text-lg text-orange-500 sm:text-xl z-50 h-6">SOLUTIONS</h3>
+
+          <div className="h-10 flex flex-col justify-between gap-1">
+            <h2
+              style={{ color: nav ? `#ffffff` : `${textColor}` }}
+              className="font-bold text-xl sm:text-xl z-50 h-4"
+            >
+              KORIS<span className="italic text-xl">energy</span>
+            </h2>
+            <h3 className="font-bold text-lg text-orange-500 sm:text-xl z-50 h-6">
+              SOLUTIONS
+            </h3>
+          </div>
         </div>
-      </div>
+      </Link>
       <ul
         style={{ color: `${textColor}` }}
         className="hidden sm:flex justify-center items-center"
       >
         <li className="p-6 font-bold tracking-wide">
-          <Link href="/">Home</Link>
+          <Link
+            href="/"
+            className="hover:border-b-2"
+            style={{ borderBottomColor: `${textColor}` }}
+          >
+            Home
+          </Link>
         </li>
         <li className="p-6 font-bold tracking-wide">
-          <Link href="/projects">Projects</Link>
+          <Link
+            href="/projects"
+            className="hover:border-b-2"
+            style={{ borderBottomColor: `${textColor}` }}
+          >
+            Projects
+          </Link>
         </li>
         <li className="p-6 font-bold tracking-wide">
-          <Link href="/about">About</Link>
+          <Link
+            href="/about"
+            className="hover:border-b-2"
+            style={{ borderBottomColor: `${textColor}` }}
+          >
+            About
+          </Link>
         </li>
         <Link href="/contact">
           <button
@@ -70,7 +91,7 @@ const Navbar = () => {
       {/* Menu button */}
       <div
         onClick={toggleNav}
-        style={{ color: `${textColor}` }}
+        style={{ color: nav ? `#ffffff` : `${textColor}` }}
         className="block sm:hidden cursor-pointer z-[5]"
       >
         {nav ? <AiOutlineClose size={24} /> : <VscMenu size={20} />}
