@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       style={{ backgroundColor: `${color}` }}
-      className="fixed w-full flex justify-between items-center py-5 px-5 md:px-32 text-white ease-in duration-300 z-20"
+      className="fixed w-full flex justify-between items-center py-5 px-5 lg:px-32 text-white ease-in duration-300 z-20"
     >
       <Link href="/" className="z-50">
         <div className="flex items-center justify-center gap-1">
@@ -37,11 +37,11 @@ const Navbar = () => {
           <div className="h-10 flex flex-col justify-between gap-1">
             <h2
               style={{ color: nav ? `#ffffff` : `${textColor}` }}
-              className="font-bold text-xl md:text-xl z-50 h-4"
+              className="font-bold text-xl z-50 h-3"
             >
               KORIS<span className="italic text-xl">energy</span>
             </h2>
-            <h3 className="font-bold text-lg text-orange-500 md:text-xl z-50 h-6">
+            <h3 className="font-bold text-lg text-orange-500 z-50 h-6">
               SOLUTIONS
             </h3>
           </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
         <Link href="/contact">
           <button
             style={{ borderColor: `${textColor}` }}
-            className="border hover:bg-gray-100 group rounded-sm ml-4 py-2 font-bold px-4"
+            className="border hover:bg-gray-100 group ml-4 py-2 font-bold px-4"
           >
             <p className="h-5 text-center group-hover:text-gray-800">Contact</p>
           </button>

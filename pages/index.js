@@ -1,60 +1,64 @@
+import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import { SliderData } from "../components/SliderData";
 
 export default function Home() {
   return (
     <>
-      <div>
-        <div className="relative h-screen px-4 md:px-32 md:pt-32 pt-20 w-full bg-fixed bg-center bg-cover custom-bg">
-          {/* Overlay */}
-          <div className="absolute top-0 left-0 right-0 bottom-0 h-screen bg-black/75" />
-          <div className="gap-3 w-full md:h-[70%] md:flex md:justify-between">
-            <Slider slides={SliderData} />
-            <div className="relative bg-gray-100 rounded-md px-8 py-12 h-80 md:h-auto w-full md:w-[35%]">
-              <h3 className="text-2xl font-bold mb-4">Living Off-The-Grid</h3>
-              <p className="text-base text-gray-500">
-                With our service, you are guaranteed to live off unreliable
-                power grid and wave goodbye to epileptic power supply. At Koris
-                Energy, we ensure that our clients get maximum satisfaction.
-              </p>
+      <div className="relative md:pt-32 pt-20 w-full bg-fixed bg-center bg-cover">
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-slate-900" />
+        <div className="lg:mx-32 mx-4 gap-2 lg:flex lg:justify-between">
+          <Slider slides={SliderData} />
+          <div className="relative bg-gray-100 px-6 py-10 lg:h-auto w-full lg:w-[35%]">
+            <h3 className="text-2xl font-bold mb-4">Living Off-The-Grid</h3>
+            <p className="text-base text-gray-500">
+              With our service, you are guaranteed to live off unreliable power
+              grid and wave goodbye to epileptic power supply. At Koris Energy,
+              we ensure that our clients get maximum satisfaction.
+            </p>
 
-              <div className="absolute bottom-4 ">
-                <h3 className="font-semibold text-lg mb-2">
-                  You can find us here
-                </h3>
-                <div className="flex gap-4">
-                  <Link target="_blank" href="https://www.twitter.com/kenbuzor">
-                    <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
-                      <button>
-                        <FaFacebookF size={18} className="text-white" />
-                      </button>
-                    </div>
-                  </Link>
+            <div className=" ">
+              <h3 className="font-semibold text-lg mb-1 mt-12">
+                You can find us here
+              </h3>
+              <div className="flex gap-4">
+                <Link
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=100084899641073"
+                >
+                  <div className="bg-gray-400 w-8 h-8 flex justify-center items-center rounded-md">
+                    <button>
+                      <FaFacebookF size={16} className="text-white" />
+                    </button>
+                  </div>
+                </Link>
 
-                  <Link href="https://www.twitter.com/kenbuzor">
-                    <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
-                      <button>
-                        <AiOutlineTwitter size={22} className="text-white" />
-                      </button>
-                    </div>
-                  </Link>
-                  <Link href="https://www.twitter.com/kenbuzor">
-                    <div className="bg-gray-600 w-8 h-8 flex justify-center items-center rounded-md">
-                      <button>
-                        <AiOutlineInstagram size={22} className="text-white" />
-                      </button>
-                    </div>
-                  </Link>
-                </div>
+                <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
+                  <div className="bg-gray-400 w-8 h-8 flex justify-center items-center rounded-md">
+                    <button>
+                      <FaLinkedinIn size={16} className="text-white" />
+                    </button>
+                  </div>
+                </Link>
+                <Link href="https://www.instagram.com/korisenergy/">
+                  <div className="bg-gray-400 w-8 h-8 flex justify-center items-center rounded-md">
+                    <button>
+                      <FaInstagram size={16} className="text-white" />
+                    </button>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
-          <div className="w-full relative bg-gray-50 mt-4 md:px-32 px-6 py-8">
-            <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
+        </div>
+        <div className="relative flex items-center w-full bg-gray-100 py-8 mt-2">
+          <div className="w-1/2 lg:pl-32 lg:pr- px-6">
+            <h2 className="text-2xl text-gray-800 font-bold py-4">
               About Us
             </h2>
             <p className="text-gray-800 text-base tracking-wide">
@@ -69,14 +73,16 @@ export default function Home() {
               generation, distribution, storage and consumption
             </p>
           </div>
-          <div className="w-full relative bg-gray-50 mt-4 md:px-32 px-6 py-8">
-            <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
-              Shoot us an email
-            </h2>
-            <Contact />
+          <div className="w-1/2 flex justify-center items-center">
+          <Image src="/korisenergylogoNoBg.png" width={300} height={300} alt="Koris Logo" />
           </div>
         </div>
-        <div className="w-full h-96 bg-blue-100 px-4" />
+        <div className="relative w-full bg-gray-50 mt-2 md:px-32 px-6 py-12">
+          <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
+            Shoot us an email
+          </h2>
+          <Contact />
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -26,7 +28,9 @@ const Layout = ({ children }) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <Navbar />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 };

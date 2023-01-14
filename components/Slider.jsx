@@ -14,7 +14,7 @@ const Slider = ({ slides }) => {
   if (!Array.isArray(slides) || slides.length <= 0) return null;
 
   return (
-    <div className="relative w-full sm:w-[65%] h-96 sm:h-auto mb-2 sm:mb-0 border-8 border-gray-500 rounded-md">
+    <div className="relative w-full lg:w-[65%] h-96 lg:h-auto mb-2 lg:mb-0 border-4 border-gray-500">
       <div className="flex relative ease-in duration-300 w-full h-full">
         {slides.map((slide, i) => {
           return (
