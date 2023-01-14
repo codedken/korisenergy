@@ -20,7 +20,7 @@ const Footer = () => {
             </h3>
           </div>
         </div>
-        <div className="w-full mt-8 flex gap-10 justify-center text-sm text-gray-500 font-extralight leading-7">
+        <div className="w-full mt-8 flex gap-8 justify-center text-sm text-gray-500 font-extralight leading-7">
           <div className="w-[50%] flex justify-end">
             <p className="w-64 text-right">
               No 23 Ayinde Giwa street, Surulere, Lagos state, Nigeria.
@@ -33,9 +33,7 @@ const Footer = () => {
             <p className="flex items-center gap-2 ">
               +234-802 1060 063 (Corporate HQ)
             </p>
-            <p className="flex items-center gap-2 ">
-              korisenergysolutions@gmail.com
-            </p>
+            
           </div>
         </div>
         <div className="w-full flex gap-3 justify-center items-center mt-12">
