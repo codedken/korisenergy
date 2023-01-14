@@ -28,15 +28,12 @@ const Footer = () => {
           </div>
           <div className="w-[50%]">
             <p className="flex items-center gap-2 ">
-              <BsTelephone size={16} />
               +234-802 1060 063 (Commercial Office)
             </p>
             <p className="flex items-center gap-2 ">
-              <BsTelephone size={16} />
               +234-802 1060 063 (Corporate HQ)
             </p>
             <p className="flex items-center gap-2 ">
-              <BsEnvelope size={18} />
               korisenergysolutions@gmail.com
             </p>
           </div>
@@ -54,7 +51,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center items-center py-5 w-full bg-gray-900 text-orange-500 tracking-wider">
-        <small className="text-base">copyright © {new Date().getFullYear()}</small>
+        <small className="text-base">
+          copyright © {new Date().getFullYear()}
+        </small>
       </div>
     </div>
   );
