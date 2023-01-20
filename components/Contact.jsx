@@ -45,7 +45,7 @@ const Contact = () => {
     <form onSubmit={sendEmail} className="max-w-[600px] m-auto">
       <div className="grid md:grid-cols-2 gap-2">
         <input
-          className="border shadow-lg p-3"
+          className="border shadow-lg rounded-md p-3"
           type="text"
           name="from_name"
           value={inputData.from_name}
@@ -54,7 +54,7 @@ const Contact = () => {
           placeholder="Your name"
         />
         <input
-          className="border shadow-lg p-3"
+          className="border shadow-lg rounded-md p-3"
           type="email"
           name="from_email"
           value={inputData.from_email}
@@ -65,7 +65,7 @@ const Contact = () => {
       </div>
 
       <input
-        className="border shadow-lg p-3 w-full my-2"
+        className="border shadow-lg rounded-md p-3 w-full my-2"
         type="text"
         name="subject"
         value={inputData.subject}
@@ -74,7 +74,7 @@ const Contact = () => {
         placeholder="Subject"
       />
       <textarea
-        className="border shadow-lg p-3 w-full rounded-md"
+        className="border shadow-lg rounded-md p-3 w-full"
         cols="30"
         rows="10"
         name="message"
@@ -83,7 +83,7 @@ const Contact = () => {
         onChange={updateInputData}
         placeholder="Message"
       ></textarea>
-      <button className="flex justify-center items-center border rounded-md bg-blue-700 text-white font-bold tracking-wider h-10 w-full">
+      <button className="contact-btn flex justify-center items-center rounded-md bg-blue-700 hover:bg-blue-800 text-white font-bold tracking-wider h-10 w-full">
         {!isLoading ? <p className="h-5">SEND</p>
         : <div className="animate-spin w-6 h-6 rounded-full border-4 border-white border-r-orange-500"></div>}
       </button>

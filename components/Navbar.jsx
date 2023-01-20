@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { BsTelephoneFill } from "react-icons/bs";
 import { VscMenu } from "react-icons/vsc";
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       style={{ backgroundColor: `${color}` }}
-      className="fixed w-full flex justify-between items-center py-5 px-5 lg:px-32 text-white ease-in duration-300 z-20"
+      className="fixed w-full flex justify-between shadow-black/10 shadow-sm items-center py-5 px-5 lg:px-36 text-white ease-in duration-300 z-20"
     >
       <Link href="/" className="z-50">
         <div className="flex items-center justify-center gap-1">
@@ -37,11 +38,11 @@ const Navbar = () => {
           <div className="h-10 flex flex-col justify-between gap-1">
             <h2
               style={{ color: nav ? `#ffffff` : `${textColor}` }}
-              className="font-bold text-xl z-50 h-3"
+              className="font-bold text-xl z-50 h-4"
             >
               KORIS<span className="italic text-xl">energy</span>
             </h2>
-            <h3 className="font-bold text-lg text-orange-500 z-50 h-6">
+            <h3 className="font-bold text-lg md:text-xl text-orange-500 z-50 h-6">
               SOLUTIONS
             </h3>
           </div>
@@ -81,8 +82,9 @@ const Navbar = () => {
         <Link href="/contact">
           <button
             style={{ borderColor: `${textColor}` }}
-            className="border hover:bg-gray-100 group ml-4 py-2 font-bold px-4"
+            className="border flex gap-2 hover:bg-gray-100 group ml-4 py-2 font-bold px-4"
           >
+            <BsTelephoneFill className="group-hover:text-gray-800"/>
             <p className="h-5 text-center group-hover:text-gray-800">Contact</p>
           </button>
         </Link>
@@ -100,7 +102,7 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "flex justify-center items-center bg-black/80 absolute top-0 bottom-0 left-0 right-0 h-screen ease-in duration-300"
+            ? "flex justify-center items-center bg-black/90 absolute top-0 bottom-0 left-0 right-0 h-screen ease-in duration-300"
             : "flex justify-center items-center absolute top-0 bottom-0 left-[150%] right-0 h-screen ease-in duration-300"
         }
       >

@@ -1,87 +1,169 @@
 import Image from "next/image";
-import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { BsBriefcaseFill } from "react-icons/bs";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Slider from "../components/Slider";
-import { SliderData } from "../components/SliderData";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <div className="relative md:pt-32 pt-20 w-full bg-fixed bg-center bg-cover">
+      <div className="relative w-full">
         {/* Overlay */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-slate-900" />
-        <div className="lg:mx-32 mx-4 gap-2 lg:flex lg:justify-between">
-          <Slider slides={SliderData} />
-          <div className="relative bg-gray-100 px-6 py-10 lg:h-auto w-full lg:w-[35%]">
-            <h3 className="text-2xl font-bold mb-4">Living Off-The-Grid</h3>
-            <p className="text-base text-gray-500">
-              With our service, you are guaranteed to live off unreliable power
-              grid and wave goodbye to epileptic power supply. At Koris Energy,
-              we ensure that our clients get maximum satisfaction.
-            </p>
+        <div className="w-full h-screen overflow-x-clip absolute top-0 left-0">
+          <div className="w-[500%] h-full flex slider">
+            <Image
+              src="/solarpanel.png"
+              width={800}
+              height={800}
+              alt="Solar Panel"
+              className="h-full w-[20%]"
+            />
+            <Image
+              src="/img1.jpg"
+              width={800}
+              height={800}
+              alt="Solar Panel"
+              className="h-full w-[20%]"
+            />
+            <Image
+              src="/img2.jpg"
+              width={800}
+              height={800}
+              alt="Solar Panel"
+              className="h-full w-[20%]"
+            />
+            <Image
+              src="/img3.jpg"
+              width={800}
+              height={800}
+              alt="Solar Panel"
+              className="h-full w-[20%]"
+            />
+            <Image
+              src="/solarpanel.png"
+              width={800}
+              height={800}
+              alt="Solar Panel"
+              className="h-full w-[20%]"
+            />
+          </div>
+        </div>
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-black/70" />
+        <div className="relative">
+          <div className="relative lg:mx-36 mx-4 h-screen">
+            <div className="absolute bottom-1/2 top-1/2 flex justify-center items-center">
+              <h1
+                style={{ fontFamily: "Kanit" }}
+                className="lg:text-7xl text-6xl text-center font-bold text-white"
+              >
+                Leading sustainable energy future in Nigeria
+              </h1>
+            </div>
+            <div className="absolute bottom-16 right-0 left-0 mx-auto w-fit">
+              <div className="relative bg-gray-700/80 flex items-center gap-3 w-fit p-3 rounded-full">
+                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
+                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
+                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
+                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
+                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
+                <div className="slider-indicator lg:w-12 w-8 lg:h-12 h-8 border-4 rounded-full absolute left-3 bg-orange-400 duration-500"></div>
+              </div>
+            </div>
+          </div>
+          <div className="lg:h-[32rem] lg:flex justify-center items-center">
+            <div className="relative lg:w-[50%] h-full">
+              <Image
+                src="/img3.jpg"
+                width={400}
+                height={400}
+                alt="products"
+                className="relative w-full h-full"
+              />
+              <div className="absolute top-0 bottom-0 m-auto right-0 left-0 w-[60%] h-fit p-6 bg-black/40 rounded-lg">
+                <q className="text-gray-100 lg:text-xl text-center text-lg font-bold">
+                   We deploy services beyond your imagination. Give Koris a try.
+                </q>
+              </div>
+            </div>
 
-            <div className=" ">
-              <h3 className="font-semibold text-lg mb-1 mt-12">
-                You can find us here
-              </h3>
-              <div className="flex gap-4">
-                <Link
-                  target="_blank"
-                  href="https://www.facebook.com/profile.php?id=100084899641073"
-                >
-                  <div className="bg-gray-400 w-8 h-8 flex justify-center items-center rounded-md">
-                    <button>
-                      <FaFacebookF size={16} className="text-white" />
-                    </button>
+            <div className="lg:w-[50%] h-full bg-gray-50 p-12">
+              <div className="relative h-full">
+                <h3 className="text-3xl text-gray-600 font-bold">
+                  Living Off The Grid
+                </h3>
+                <p className="mt-6 text-base text-gray-600 font-light leading-8">
+                  With our service, you are guaranteed to live off unreliable
+                  power grid and wave goodbye to epileptic power supply. At
+                  Koris Energy, we ensure that our clients get maximum
+                  satisfaction.
+                </p>
+                <p className="mt-4 text-base text-gray-600 font-light leading-8">
+                  With our service, you are guaranteed to live off unreliable
+                  power grid and wave goodbye to epileptic power supply. At
+                  Koris Energy, we ensure that our clients get maximum
+                  satisfaction.
+                </p>
+                <div className="mt-12">
+                  <h4 className="text-xl text-gray-800 ">
+                    You can reach us here
+                  </h4>
+                  <div className="flex items-center gap-3 mt-3">
+                    <Link href="https://www.facebook.com/profile.php?id=100084899641073">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg bg-blue-500">
+                        <FaFacebookF className="text-white" size={24} />
+                      </button>
+                    </Link>
+                    <Link href="https://www.instagram.com/korisenergy/">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg bg-gradient-to-tr from-yellow-400 via-pink-500 to-pink-500">
+                        <FaInstagram className="text-white" size={28} />
+                      </button>
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg bg-blue-400">
+                        <FaLinkedinIn className="text-white" size={24} />
+                      </button>
+                    </Link>
                   </div>
-                </Link>
-
-                <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
-                  <div className="bg-gray-400 w-8 h-8 flex justify-center items-center rounded-md">
-                    <button>
-                      <FaLinkedinIn size={16} className="text-white" />
-                    </button>
-                  </div>
-                </Link>
-                <Link href="https://www.instagram.com/korisenergy/">
-                  <div className="bg-gray-400 w-8 h-8 flex justify-center items-center rounded-md">
-                    <button>
-                      <FaInstagram size={16} className="text-white" />
-                    </button>
-                  </div>
-                </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative flex items-center w-full bg-gray-100 py-8 mt-2">
-          <div className="w-1/2 lg:pl-32 lg:pr- px-6">
-            <h2 className="text-2xl text-gray-800 font-bold py-4">
+        <div className="relative flex items-center w-full bg-white py-8 mt-2">
+          <div className="lg:w-1/2 lg:pl-36 px-6">
+            <h2 className="text-2xl text-center lg:text-left text-gray-800 font-bold pb-4">
               About Us
             </h2>
-            <p className="text-gray-800 text-base tracking-wide">
+            <p className="text-gray-600 text-base font-light tracking-wide leading-8">
               Koris Energy is a renewable energy company which engages in the
               supplies, installations and maintenance of premium solar and wind
               power systems. The company sells, installs, and maintains all
               kinds of solar and wind products, ranging from inverters, solar
               panels, batteries, solar charge controllers, solar street lights,
               solar water heating systems, solar water pumping systems, solar
-              air conditioners, wind turbines, and wind charge controllers. We
-              offer end-to-end clean energy products and services, including
-              generation, distribution, storage and consumption
+              air conditioners, wind turbines, and wind charge controllers.
             </p>
+            <button className="flex gap-2 items-center mt-6 border border-orange-400 text-orange-500 hover:bg-orange-400 hover:text-white font-bold text-sm tracking-wide py-3 px-6">
+              <span className="h-4">Business Profile</span>
+              <BsBriefcaseFill size={20} />
+            </button>
           </div>
-          <div className="w-1/2 flex justify-center items-center">
-          <Image src="/korisenergylogoNoBg.png" width={300} height={300} alt="Koris Logo" />
+          <div className="w-1/2 lg:flex hidden lg:justify-center lg:items-center">
+            <Image
+              src="/korisenergylogoNoBg.png"
+              width={450}
+              height={450}
+              alt="Koris Logo"
+            />
           </div>
         </div>
-        <div className="relative w-full bg-gray-50 mt-2 md:px-32 px-6 py-12">
-          <h2 className="text-center text-2xl text-gray-800 font-bold p-4">
-            Shoot us an email
-          </h2>
-          <Contact />
+        <div className="relative w-full bg-gray-50 mt-2 md:px-36 py-12">
+          <div className="w-full h-full px-6 py-4 bg-gradient-to-br from-orange-200 via-blue-100 to-teal-100">
+            <h2 className="text-center text-2xl text-gray-600 font-bold p-4">
+              Shoot us an email
+            </h2>
+            <Contact />
+          </div>
         </div>
       </div>
     </>

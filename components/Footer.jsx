@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { GoLocation } from "react-icons/go";
-import { BsEnvelope, BsTelephone } from "react-icons/bs";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,10 +11,10 @@ const Footer = () => {
           <Image src="/korislogo.png" width={50} height={50} alt="Koris Logo" />
 
           <div className="h-10 flex flex-col justify-between gap-1">
-            <h2 className="font-bold text-xl md:text-xl z-50 h-4">
+            <h2 className="font-bold text-xl h-4">
               KORIS<span className="italic text-xl">energy</span>
             </h2>
-            <h3 className="font-bold text-lg text-orange-500 md:text-xl z-50 h-6">
+            <h3 className="font-bold text-lg text-orange-500 md:text-xl h-6">
               SOLUTIONS
             </h3>
           </div>
@@ -33,24 +32,30 @@ const Footer = () => {
             <p className="flex items-center gap-2 ">
               +234-802 1060 063 (Corporate HQ)
             </p>
-            
           </div>
         </div>
         <div className="w-full flex gap-3 justify-center items-center mt-12">
-          <div className="p-2 bg-gray-400 rounded-md inset-2">
-            <FaFacebookF style={{ color: "white" }} />
-          </div>
-          <div className="p-2 bg-gray-400 rounded-md inset-2">
-            <FaInstagram style={{ color: "white" }} />
-          </div>
-          <div className="p-2 bg-gray-400 rounded-md inset-2">
-            <FaLinkedinIn style={{ color: "white" }} />
-          </div>
+          <Link href="https://www.facebook.com/profile.php?id=100084899641073">
+            <div className="p-2 cursor-pointer hover:bg-gray-600 bg-gray-400 rounded-md inset-2">
+              <FaFacebookF style={{ color: "white" }} />
+            </div>
+          </Link>
+          <Link href="https://www.instagram.com/korisenergy/">
+            <div className="p-2 cursor-pointer hover:bg-gray-600 bg-gray-400 rounded-md inset-2">
+              <FaInstagram style={{ color: "white" }} />
+            </div>
+          </Link>
+          <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
+            <div className="p-2 cursor-pointer hover:bg-gray-600 bg-gray-400 rounded-md inset-2">
+              <FaLinkedinIn style={{ color: "white" }} />
+            </div>
+          </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center py-5 w-full bg-gray-900 text-orange-500 tracking-wider">
-        <small className="text-base">
-          copyright © {new Date().getFullYear()}
+      <div className="flex justify-center items-center py-5 w-full bg-gray-900 text-yellow-500 tracking-wider">
+        <small className="lg:text-base text-center text-sm">
+          Copyright © {new Date().getFullYear()}.{" "}
+          <span className="text-white underline">All Rights Reserved Koris Energy Solutions</span>
         </small>
       </div>
     </div>

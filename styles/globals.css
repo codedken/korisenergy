@@ -6,6 +6,115 @@ html{
   scroll-behavior: smooth;
   font-family: 'Karma', sans-serif;
 }
-.custom-bg{
-  background-image: url('https://images.unsplash.com/photo-1615630859219-0459703c34e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI2fHxzb2xhciUyMGVuZXJneXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+.slider{
+  animation: slide 20s infinite linear;
+}
+
+@keyframes slide {
+  0%{
+    margin-left: 0;
+  }
+  20%{
+    margin-left: 0;
+  }
+  25%{
+    margin-left: -100%;
+  }
+  45%{
+    margin-left: -100%;
+  }
+  50%{
+    margin-left: -200%;
+  }
+  70%{
+    margin-left: -200%;
+  }
+  75%{
+    margin-left: -300%;
+  }
+  95%{
+    margin-left: -300%;
+  }
+  100%{
+    margin-left: -400%;
+  }
+}
+
+.slider-indicator{
+  animation: slider-indicator-btn 20s infinite linear;
+}
+
+@keyframes slider-indicator-btn {
+  0%{
+    transform: translateX(calc(3rem * 0));
+  }
+  20%{
+    transform: translateX(calc(3rem * 0));
+  }
+  25%{
+    transform: translateX(calc((3rem + 0.75rem) * 1));
+  }
+  45%{
+    transform: translateX(calc((3rem + 0.75rem) * 1));
+  }
+  50%{
+    transform: translateX(calc((3rem + 0.75rem) * 2));
+  }
+  70%{
+    transform: translateX(calc((3rem + 0.75rem) * 2));
+  }
+  75%{
+    transform: translateX(calc((3rem + 0.75rem) * 3));
+  }
+  95%{
+    transform: translateX(calc((3rem + 0.75rem) * 3));
+  }
+  100%{
+    transform: translateX(calc((3rem + 0.75rem) * 4));
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .slider-indicator{
+    animation: slider-indicator-btn 20s infinite linear;
+    animation-delay: 5s;
+  }
+  
+  @keyframes slider-indicator-btn {
+    0%{
+      transform: translateX(calc(2rem * 0));
+    }
+    20%{
+      transform: translateX(calc(2rem * 0));
+    }
+    25%{
+      transform: translateX(calc((2rem + 0.75rem) * 1));
+    }
+    45%{
+      transform: translateX(calc((2rem + 0.75rem) * 1));
+    }
+    50%{
+      transform: translateX(calc((2rem + 0.75rem) * 2));
+    }
+    70%{
+      transform: translateX(calc((2rem + 0.75rem) * 2));
+    }
+    75%{
+      transform: translateX(calc((2rem + 0.75rem) * 3));
+    }
+    95%{
+      transform: translateX(calc((2rem + 0.75rem) * 3));
+    }
+    100%{
+      transform: translateX(calc((2rem + 0.75rem) * 4));
+    }
+  }
+}
+
+.sm-btn, .contact-btn{
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0,0,0,0.35),
+  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+  inset 5px 5px 15px rgba(0,0,0,0.35);
 }
