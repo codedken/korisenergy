@@ -48,11 +48,11 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-black/80" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-black/70" />
         <div className="relative">
           <div className="relative w-full h-screen">
             <div className="absolute bottom-1/2 w-[100%] top-1/2 flex justify-center items-center">
-              <div className="w-[90%] overflow-hidden">
+              <div className="w-[98%] overflow-hidden">
                 <div className="sliding-text w-[500%] flex">
                   <h1
                     style={{ fontFamily: "Kanit" }}
@@ -70,7 +70,7 @@ export default function Home() {
                     style={{ fontFamily: "Kanit" }}
                     className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
                   >
-                    Durable Systems To Provide You With Comfort.
+                    Durable Systems To Provide You With Comfort
                   </h1>
                   <h1
                     style={{ fontFamily: "Kanit" }}
@@ -117,13 +117,13 @@ export default function Home() {
             <div className="lg:w-[50%] h-full bg-gray-50 py-8 px-6">
               <div className="relative h-full">
                 <h3 className="text-3xl text-gray-600 font-bold">
-                  Living Off The Grid
+                  Live Off-Grid
                 </h3>
                 <p className="mt-6 text-base text-gray-600 font-light leading-8">
-                  With our service, you are guaranteed to live off unreliable
-                  power grid and wave goodbye to epileptic power supply. At
-                  Koris Energy, we ensure that our clients get maximum
-                  satisfaction.
+                  Most countries in Africa are faced with inconsistent power
+                  supply. As a result, this leads to some level of
+                  unproductivity and inefficiencies for businesses that depends
+                  largely on power.
                 </p>
                 <p className="mt-4 text-base text-gray-600 font-light leading-8">
                   With our service, you are guaranteed to live off unreliable
@@ -169,10 +169,12 @@ export default function Home() {
               solar water heating systems, solar water pumping systems, solar
               air conditioners, wind turbines, and wind charge controllers.
             </p>
-            <button className="flex gap-2 items-center mt-6 border border-orange-400 text-orange-500 hover:bg-orange-400 hover:text-white font-bold text-sm tracking-wide py-3 px-6">
-              <span className="h-4">Business Profile</span>
-              <BsBriefcaseFill size={20} />
-            </button>
+            <Link href="/projects">
+              <button className="flex gap-2 items-center mt-6 border border-orange-400 text-orange-500 hover:bg-orange-400 hover:text-white font-bold text-sm tracking-wide py-3 px-6">
+                <span className="h-4">Business Profile</span>
+                <BsBriefcaseFill size={20} />
+              </button>
+            </Link>
           </div>
           <div className="w-1/2 lg:flex hidden lg:justify-center lg:items-center">
             <Image

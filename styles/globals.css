@@ -7,7 +7,7 @@ html{
   font-family: 'Karma', sans-serif;
 }
 .slider{
-  animation: slide 40s infinite linear;
+  animation: slide 30s infinite linear;
 }
 
 @keyframes slide {
@@ -41,7 +41,7 @@ html{
 }
 
 .slider-indicator{
-  animation: slider-indicator-btn 40s infinite linear;
+  animation: slider-indicator-btn 30s infinite linear;
 }
 
 @keyframes slider-indicator-btn {
@@ -77,7 +77,7 @@ html{
 
 @media screen and (max-width: 1024px) {
   .slider-indicator{
-    animation: slider-indicator-btn 40s infinite linear;
+    animation: slider-indicator-btn 30s infinite linear;
   }
   
   @keyframes slider-indicator-btn {
@@ -112,7 +112,7 @@ html{
 }
 
 .sliding-text{
-  animation: slidetext 40s infinite linear
+  animation: slidetext 30s infinite linear
 }
 
 @keyframes slidetext {
