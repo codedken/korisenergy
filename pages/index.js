@@ -12,35 +12,35 @@ export default function Home() {
         <div className="w-full h-screen overflow-x-clip absolute top-0 left-0">
           <div className="w-[500%] h-full flex slider">
             <Image
-              src="/solarpanel.png"
+              src="/korisimages/panel0.png"
               width={800}
               height={800}
               alt="Solar Panel"
               className="h-full w-[20%]"
             />
             <Image
-              src="/img1.jpg"
+              src="/korisimages/panel2.png"
               width={800}
               height={800}
               alt="Solar Panel"
               className="h-full w-[20%]"
             />
             <Image
-              src="/img2.jpg"
+              src="/korisimages/battery2.png"
               width={800}
               height={800}
               alt="Solar Panel"
               className="h-full w-[20%]"
             />
             <Image
-              src="/img3.jpg"
+              src="/korisimages/panel6.png"
               width={800}
               height={800}
               alt="Solar Panel"
               className="h-full w-[20%]"
             />
             <Image
-              src="/solarpanel.png"
+              src="/korisimages/panel0.png"
               width={800}
               height={800}
               alt="Solar Panel"
@@ -48,18 +48,46 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-black/70" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-black/80" />
         <div className="relative">
-          <div className="relative lg:mx-36 mx-4 h-screen">
-            <div className="absolute bottom-1/2 top-1/2 flex justify-center items-center">
-              <h1
-                style={{ fontFamily: "Kanit" }}
-                className="lg:text-7xl text-6xl text-center font-bold text-white"
-              >
-                Leading sustainable energy future in Nigeria
-              </h1>
+          <div className="relative w-full h-screen">
+            <div className="absolute bottom-1/2 w-[100%] top-1/2 flex justify-center items-center">
+              <div className="w-[90%] overflow-hidden">
+                <div className="sliding-text w-[500%] flex">
+                  <h1
+                    style={{ fontFamily: "Kanit" }}
+                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
+                  >
+                    Leading sustainable energy future in Nigeria
+                  </h1>
+                  <h1
+                    style={{ fontFamily: "Kanit" }}
+                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
+                  >
+                    Experience uninterruptible power supply
+                  </h1>
+                  <h1
+                    style={{ fontFamily: "Kanit" }}
+                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
+                  >
+                    Durable Systems To Provide You With Comfort.
+                  </h1>
+                  <h1
+                    style={{ fontFamily: "Kanit" }}
+                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
+                  >
+                    Live the life that you desire
+                  </h1>
+                  <h1
+                    style={{ fontFamily: "Kanit" }}
+                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
+                  >
+                    Leading sustainable energy future in Nigeria
+                  </h1>
+                </div>
+              </div>
             </div>
-            <div className="absolute bottom-16 right-0 left-0 mx-auto w-fit">
+            <div className="absolute bottom-20 right-0 left-0 mx-auto w-fit">
               <div className="relative bg-gray-700/80 flex items-center gap-3 w-fit p-3 rounded-full">
                 <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
                 <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
@@ -79,14 +107,14 @@ export default function Home() {
                 alt="products"
                 className="relative w-full h-full"
               />
-              <div className="absolute top-0 bottom-0 m-auto right-0 left-0 w-[60%] h-fit p-6 bg-black/40 rounded-lg">
+              <div className="absolute bottom-4 right-0 mx-auto left-0 w-[80%] h-fit p-6 bg-black/40 rounded-lg">
                 <q className="text-gray-100 lg:text-xl text-center text-lg font-bold">
-                   We deploy services beyond your imagination. Give Koris a try.
+                  We deploy services beyond your imagination. Give Koris a try.
                 </q>
               </div>
             </div>
 
-            <div className="lg:w-[50%] h-full bg-gray-50 p-12">
+            <div className="lg:w-[50%] h-full bg-gray-50 py-8 px-6">
               <div className="relative h-full">
                 <h3 className="text-3xl text-gray-600 font-bold">
                   Living Off The Grid
@@ -109,17 +137,17 @@ export default function Home() {
                   </h4>
                   <div className="flex items-center gap-3 mt-3">
                     <Link href="https://www.facebook.com/profile.php?id=100084899641073">
-                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg bg-blue-500">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-500 bg-blue-600">
                         <FaFacebookF className="text-white" size={24} />
                       </button>
                     </Link>
                     <Link href="https://www.instagram.com/korisenergy/">
-                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg bg-gradient-to-tr from-yellow-400 via-pink-500 to-pink-500">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg hover:from-yellow-300 hover:to-pink-400 hover:via-pink-400 bg-gradient-to-tr from-yellow-400 via-pink-500 to-pink-500">
                         <FaInstagram className="text-white" size={28} />
                       </button>
                     </Link>
                     <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
-                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg bg-blue-400">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-400 bg-blue-500">
                         <FaLinkedinIn className="text-white" size={24} />
                       </button>
                     </Link>
@@ -131,10 +159,8 @@ export default function Home() {
         </div>
         <div className="relative flex items-center w-full bg-white py-8 mt-2">
           <div className="lg:w-1/2 lg:pl-36 px-6">
-            <h2 className="text-2xl text-center lg:text-left text-gray-800 font-bold pb-4">
-              About Us
-            </h2>
-            <p className="text-gray-600 text-base font-light tracking-wide leading-8">
+            <h2 className="text-3xl text-gray-600 font-bold">About Us</h2>
+            <p className="mt-6 text-gray-600 text-base font-light tracking-wide leading-8">
               Koris Energy is a renewable energy company which engages in the
               supplies, installations and maintenance of premium solar and wind
               power systems. The company sells, installs, and maintains all
@@ -150,7 +176,7 @@ export default function Home() {
           </div>
           <div className="w-1/2 lg:flex hidden lg:justify-center lg:items-center">
             <Image
-              src="/korisenergylogoNoBg.png"
+              src="/korisenergypnglogo.png"
               width={450}
               height={450}
               alt="Koris Logo"

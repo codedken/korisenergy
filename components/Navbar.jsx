@@ -96,27 +96,27 @@ const Navbar = () => {
         style={{ color: nav ? `#ffffff` : `${textColor}` }}
         className="block md:hidden cursor-pointer z-[5]"
       >
-        {nav ? <AiOutlineClose size={24} /> : <VscMenu size={20} />}
+        {nav ? <AiOutlineClose size={32} /> : <VscMenu size={28} />}
       </div>
       {/*Mobile Menu */}
       <div
         className={
           nav
-            ? "flex justify-center items-center bg-black/90 absolute top-0 bottom-0 left-0 right-0 h-screen ease-in duration-300"
+            ? "flex justify-center items-center bg-black/95 absolute top-0 bottom-0 left-0 right-0 h-screen ease-in duration-300"
             : "flex justify-center items-center absolute top-0 bottom-0 left-[150%] right-0 h-screen ease-in duration-300"
         }
       >
-        <ul className=" text-white">
-          <li onClick={toggleNav} className="p-4 text-2xl">
+        <ul className="flex flex-col items-center justify-center text-white">
+          <li onClick={toggleNav} className="p-5 text-3xl font-bold">
             <Link href="/">Home</Link>
           </li>
-          <li onClick={toggleNav} className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-5 text-3xl font-bold">
             <Link href="/projects">Projects</Link>
           </li>
-          <li onClick={toggleNav} className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-5 text-3xl font-bold">
             <Link href="/about">About</Link>
           </li>
-          <li onClick={toggleNav} className="p-4 text-2xl">
+          <li onClick={toggleNav} className="p-5 text-3xl font-bold">
             <Link href="/contact">Contact</Link>
           </li>
           <li></li>

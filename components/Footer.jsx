@@ -36,23 +36,23 @@ const Footer = () => {
         </div>
         <div className="w-full flex gap-3 justify-center items-center mt-12">
           <Link href="https://www.facebook.com/profile.php?id=100084899641073">
-            <div className="p-2 cursor-pointer hover:bg-gray-600 bg-gray-400 rounded-md inset-2">
-              <FaFacebookF style={{ color: "white" }} />
-            </div>
+            <button className="w-8 h-8 flex justify-center items-center hover:bg-blue-600 bg-gray-400 rounded-md inset-2">
+              <FaFacebookF size={20} style={{ color: "white" }} />
+            </button>
           </Link>
           <Link href="https://www.instagram.com/korisenergy/">
-            <div className="p-2 cursor-pointer hover:bg-gray-600 bg-gray-400 rounded-md inset-2">
-              <FaInstagram style={{ color: "white" }} />
-            </div>
+            <button className="w-8 h-8 flex justify-center items-center hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-pink-500 bg-gray-400 rounded-md inset-2">
+              <FaInstagram size={26} style={{ color: "white" }} />
+            </button>
           </Link>
           <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
-            <div className="p-2 cursor-pointer hover:bg-gray-600 bg-gray-400 rounded-md inset-2">
-              <FaLinkedinIn style={{ color: "white" }} />
-            </div>
+            <button className="w-8 h-8 flex justify-center items-center hover:bg-blue-500 bg-gray-400 rounded-md inset-2">
+              <FaLinkedinIn size={20} style={{ color: "white" }} />
+            </button>
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center py-5 w-full bg-gray-900 text-yellow-500 tracking-wider">
+      <div className="flex justify-center items-center py-5 px-4 w-full bg-gray-900 text-yellow-500 tracking-wider">
         <small className="lg:text-base text-center text-sm">
           Copyright © {new Date().getFullYear()}.{" "}
           <span className="text-white underline">All Rights Reserved Koris Energy Solutions</span>

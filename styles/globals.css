@@ -7,7 +7,7 @@ html{
   font-family: 'Karma', sans-serif;
 }
 .slider{
-  animation: slide 20s infinite linear;
+  animation: slide 40s infinite linear;
 }
 
 @keyframes slide {
@@ -41,7 +41,7 @@ html{
 }
 
 .slider-indicator{
-  animation: slider-indicator-btn 20s infinite linear;
+  animation: slider-indicator-btn 40s infinite linear;
 }
 
 @keyframes slider-indicator-btn {
@@ -77,8 +77,7 @@ html{
 
 @media screen and (max-width: 1024px) {
   .slider-indicator{
-    animation: slider-indicator-btn 20s infinite linear;
-    animation-delay: 5s;
+    animation: slider-indicator-btn 40s infinite linear;
   }
   
   @keyframes slider-indicator-btn {
@@ -109,6 +108,40 @@ html{
     100%{
       transform: translateX(calc((2rem + 0.75rem) * 4));
     }
+  }
+}
+
+.sliding-text{
+  animation: slidetext 40s infinite linear
+}
+
+@keyframes slidetext {
+  0%{
+    margin-left: 0;
+  }
+  20%{
+    margin-left: 0;
+  }
+  25%{
+    margin-left: -100%;
+  }
+  45%{
+    margin-left: -100%;
+  }
+  50%{
+    margin-left: -200%;
+  }
+  70%{
+    margin-left: -200%;
+  }
+  75%{
+    margin-left: -300%;
+  }
+  95%{
+    margin-left: -300%;
+  }
+  100%{
+    margin-left: -400%;
   }
 }
 
