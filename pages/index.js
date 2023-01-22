@@ -64,7 +64,7 @@ export default function Home() {
                     style={{ fontFamily: "Kanit" }}
                     className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
                   >
-                    Experience uninterruptible power supply
+                    Experience uninterrupted power supply
                   </h1>
                   <h1
                     style={{ fontFamily: "Kanit" }}
