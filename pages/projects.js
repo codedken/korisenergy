@@ -1,45 +1,8 @@
 import React from "react";
 import Project from "../components/Project";
+import { client } from "../lib/client";
 
-const projects = () => {
-  const allProjects = [
-    {
-      id: "1",
-      title: "Installation of 34KVA system",
-      description: "This is an installation of a full-fitted 34KVA capatity system in a 3-bedroom apartment. This will serve for most of the appliances in the apartment. This include: 4 1hp air conditioner, 2 industrial refrigerator.",
-      imageUrl: "/korisimages/battery.png",
-    },
-    {
-      id: "2",
-      title: "Installation of 34KVA system",
-      description: "This is an installation of a full-fitted 34KVA capatity system in a 3-bedroom apartment. This will serve for most of the appliances in the apartment. This include: 4 1hp air conditioner, 2 industrial refrigerator.",
-      imageUrl: "/korisimages/battery.png",
-    },
-    {
-      id: "3",
-      title: "Installation of 34KVA system",
-      description: "This is an installation of a full-fitted 34KVA capatity system in a 3-bedroom apartment. This will serve for most of the appliances in the apartment. This include: 4 1hp air conditioner, 2 industrial refrigerator.",
-      imageUrl: "/korisimages/battery.png",
-    },
-    {
-      id: "4",
-      title: "Installation of 34KVA system",
-      description: "This is an installation of a full-fitted 34KVA capatity system in a 3-bedroom apartment. This will serve for most of the appliances in the apartment. This include: 4 1hp air conditioner, 2 industrial refrigerator.",
-      imageUrl: "/korisimages/battery.png",
-    },
-    {
-      id: "5",
-      title: "Installation of 34KVA system",
-      description: "This is an installation of a full-fitted 34KVA capatity system in a 3-bedroom apartment. This will serve for most of the appliances in the apartment. This include: 4 1hp air conditioner, 2 industrial refrigerator.",
-      imageUrl: "/korisimages/battery.png",
-    },
-    {
-      id: "6",
-      title: "Installation of 34KVA system",
-      description: "This is an installation of a full-fitted 34KVA capatity system in a 3-bedroom apartment. This will serve for most of the appliances in the apartment. This include: 4 1hp air conditioner, 2 industrial refrigerator.",
-      imageUrl: "/korisimages/battery.png",
-    },
-  ];
+const projects = ({ allprojects }) => {
   return (
     <div className="bg-black pb-4 w-full">
       <div className="pt-32 lg:px-36">
@@ -48,14 +11,27 @@ const projects = () => {
             Our Projects
           </h2>
           <div className="md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-3 grid">
-            {allProjects.map((project) => (
-              <Project key={project.id} project ={project}/>
-            ))}
+            {allprojects.length === 0 ? (
+              <h3 className="text-xl text-gray-700">No projects yet</h3>
+            ) : (
+              allprojects.map((project) => (
+                <Project key={project._id} project={project} />
+              ))
+            )}
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == "project"]`;
+  const allprojects = await client.fetch(query);
+
+  return {
+    props: { allprojects },
+  };
 };
 
 export default projects;

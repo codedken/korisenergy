@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 const Footer = () => {
@@ -47,7 +47,12 @@ const Footer = () => {
           </Link>
           <Link href="https://www.linkedin.com/company/koris-energy-solutions/">
             <button className="w-8 h-8 flex justify-center items-center hover:bg-blue-500 bg-gray-400 rounded-md inset-2">
-              <FaLinkedinIn size={20} style={{ color: "white" }} />
+              <FaLinkedinIn size={22} style={{ color: "white" }} />
+            </button>
+          </Link>
+          <Link href="https://wa.me/2348021060063">
+            <button className="w-8 h-8 flex justify-center items-center hover:bg-green-500 bg-gray-400 rounded-md inset-2">
+              <FaWhatsapp size={24} style={{ color: "white" }} />
             </button>
           </Link>
         </div>

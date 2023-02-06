@@ -27,7 +27,7 @@ const Navbar = () => {
     setNav((prevState) => !prevState);
   };
   return (
-    <nav
+    <div
       style={{ backgroundColor: `${color}` }}
       className="fixed w-full flex justify-between shadow-black/10 shadow-sm items-center py-5 px-5 lg:px-36 text-white ease-in duration-300 z-20"
     >
@@ -122,7 +122,7 @@ const Navbar = () => {
           <li></li>
         </ul>
       </div>
-    </nav>
+    </div>
   );
 };
 

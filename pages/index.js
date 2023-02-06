@@ -1,103 +1,33 @@
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { BsBriefcaseFill } from "react-icons/bs";
 import Contact from "../components/Contact";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 import Link from "next/link";
+import { useEffect } from "react";
+import HomeSlideText from "../components/HomeSlideText";
+import HomeSlideImages from "../components/HomeSlideImages";
+import About from "../components/About";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+
   return (
     <>
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden">
         {/* Overlay */}
-        <div className="w-full h-screen overflow-x-clip absolute top-0 left-0">
-          <div className="w-[500%] h-full flex slider">
-            <Image
-              src="/korisimages/panel0.png"
-              width={800}
-              height={800}
-              alt="Solar Panel"
-              className="h-full w-[20%]"
-            />
-            <Image
-              src="/korisimages/panel2.png"
-              width={800}
-              height={800}
-              alt="Solar Panel"
-              className="h-full w-[20%]"
-            />
-            <Image
-              src="/korisimages/battery2.png"
-              width={800}
-              height={800}
-              alt="Solar Panel"
-              className="h-full w-[20%]"
-            />
-            <Image
-              src="/korisimages/panel6.png"
-              width={800}
-              height={800}
-              alt="Solar Panel"
-              className="h-full w-[20%]"
-            />
-            <Image
-              src="/korisimages/panel0.png"
-              width={800}
-              height={800}
-              alt="Solar Panel"
-              className="h-full w-[20%]"
-            />
-          </div>
-        </div>
+        <HomeSlideImages />
         <div className="absolute top-0 left-0 right-0 bottom-0 h-[100%] bg-black/70" />
         <div className="relative">
-          <div className="relative w-full h-screen">
-            <div className="absolute bottom-1/2 w-[100%] top-1/2 flex justify-center items-center">
-              <div className="w-[98%] overflow-hidden">
-                <div className="sliding-text w-[500%] flex">
-                  <h1
-                    style={{ fontFamily: "Kanit" }}
-                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
-                  >
-                    Leading sustainable energy future in Nigeria
-                  </h1>
-                  <h1
-                    style={{ fontFamily: "Kanit" }}
-                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
-                  >
-                    Experience uninterrupted power supply
-                  </h1>
-                  <h1
-                    style={{ fontFamily: "Kanit" }}
-                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
-                  >
-                    Durable Systems To Provide You With Comfort
-                  </h1>
-                  <h1
-                    style={{ fontFamily: "Kanit" }}
-                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
-                  >
-                    Live the life that you desire
-                  </h1>
-                  <h1
-                    style={{ fontFamily: "Kanit" }}
-                    className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
-                  >
-                    Leading sustainable energy future in Nigeria
-                  </h1>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-20 right-0 left-0 mx-auto w-fit">
-              <div className="relative bg-gray-700/80 flex items-center gap-3 w-fit p-3 rounded-full">
-                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
-                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
-                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
-                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
-                <button className="slider-indicator-btn lg:w-12 w-8 lg:h-12 h-8 rounded-full border-4 bg-gray-400" />
-                <div className="slider-indicator lg:w-12 w-8 lg:h-12 h-8 border-4 rounded-full absolute left-3 bg-orange-400 duration-500"></div>
-              </div>
-            </div>
-          </div>
+          <HomeSlideText />
           <div className="lg:h-[32rem] lg:flex justify-center items-center">
             <div className="relative lg:w-[50%] h-full">
               <Image
@@ -107,7 +37,7 @@ export default function Home() {
                 alt="products"
                 className="relative w-full h-full"
               />
-              <div className="absolute bottom-4 right-0 mx-auto left-0 w-[80%] h-fit p-6 bg-black/40 rounded-lg">
+              <div className="absolute bottom-4 right-6 mx-auto left-6 h-fit p-6 bg-black/40 rounded-lg">
                 <q className="text-gray-100 lg:text-xl text-center text-lg font-bold">
                   We deploy services beyond your imagination. Give Koris a try.
                 </q>
@@ -115,7 +45,11 @@ export default function Home() {
             </div>
 
             <div className="lg:w-[50%] h-full bg-gray-50 py-8 px-6">
-              <div className="relative h-full">
+              <div
+                className="relative h-full"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 <h3 className="text-3xl text-gray-600 font-bold">
                   Live Off-Grid
                 </h3>
@@ -151,42 +85,34 @@ export default function Home() {
                         <FaLinkedinIn className="text-white" size={24} />
                       </button>
                     </Link>
+                    <Link href="https://wa.me/2348021060063">
+                      <button className="sm-btn flex justify-center items-center w-10 h-10 rounded-lg hover:bg-green-400 bg-green-500">
+                        <FaWhatsapp className="text-white" size={26} />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative flex items-center w-full bg-white py-8 mt-2">
-          <div className="lg:w-1/2 lg:pl-36 px-6">
-            <h2 className="text-3xl text-gray-600 font-bold">About Us</h2>
-            <p className="mt-6 text-gray-600 text-base font-light tracking-wide leading-8">
-              Koris Energy is a renewable energy company which engages in the
-              supplies, installations and maintenance of premium solar and wind
-              power systems. The company sells, installs, and maintains all
-              kinds of solar and wind products, ranging from inverters, solar
-              panels, batteries, solar charge controllers, solar street lights,
-              solar water heating systems, solar water pumping systems, solar
-              air conditioners, wind turbines, and wind charge controllers.
-            </p>
-            <Link href="/projects">
-              <button className="flex gap-2 items-center mt-6 border border-orange-400 text-orange-500 hover:bg-orange-400 hover:text-white font-bold text-sm tracking-wide py-3 px-6">
-                <span className="h-4">Business Profile</span>
-                <BsBriefcaseFill size={20} />
-              </button>
-            </Link>
-          </div>
-          <div className="w-1/2 lg:flex hidden lg:justify-center lg:items-center">
-            <Image
-              src="/korisenergypnglogo.png"
-              width={450}
-              height={450}
-              alt="Koris Logo"
-            />
+        <About />
+        <div className="py-12 px-6 w-full bg-gray-700 flex relative flex-col justify-center items-center">
+          <q className="my-12 text-gray-100 tracking-wide lg:w-[36rem] w-auto lg:text-4xl md:text-2xl text-xl font-bold">
+            It has been 2 years since Koris installed my solar system, and I
+            must confess that it is worth the money.
+          </q>
+          <div className="absolute bottom-4 right-4">
+            <p className="md:text-xl text-lg text-white font-bold">Mr Kennedy Ojukwu</p>
+            <p className="md:text-lg text-base text-gray-200">CEO Kencode Comms</p>
           </div>
         </div>
         <div className="relative w-full bg-gray-50 mt-2 md:px-36 py-12">
-          <div className="w-full h-full px-6 py-4 bg-gradient-to-br from-orange-200 via-blue-100 to-teal-100">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            className="w-full h-full px-6 py-4 bg-gradient-to-br from-orange-200 via-blue-100 to-teal-100"
+          >
             <h2 className="text-center text-2xl text-gray-600 font-bold p-4">
               Shoot us an email
             </h2>
