@@ -22,7 +22,7 @@ const HomeSlideText = () => {
               style={{ fontFamily: "Kanit" }}
               className="lg:text-7xl w-[20%] text-5xl text-center font-bold text-white"
             >
-              Durable Systems To Provide You With Comfort
+              Durable systems to provide you with comfort
             </h1>
             <h1
               style={{ fontFamily: "Kanit" }}

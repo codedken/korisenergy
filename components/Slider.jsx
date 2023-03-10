@@ -23,7 +23,7 @@ const Slider = ({ slides }) => {
                 key={i}
                 src={slide.image}
                 fill={true}
-                priority={true}
+                placeholder="blur"
                 alt="product"
                 className="w-full h-full object-cover"
               />

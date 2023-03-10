@@ -3,9 +3,9 @@ import Image from "next/image";
 const Project = ({ project: { title, description, image } }) => {
   return (
     <div className="p-4 border border-gray-100 shadow-md">
-      <div className="h-48 w-full relative">
+      <div className="h-48 w-full relative block">
         <Image
-          src="https://res.cloudinary.com/dsfdj3laa/image/upload/v1675407565/korisenergy/Untitled-2.png"
+          src={image[0]}
           fill={true}
           style={{ objectFit: "cover" }}
           alt="project image"

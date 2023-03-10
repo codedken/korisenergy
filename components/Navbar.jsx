@@ -13,7 +13,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleColor = () => {
       if (window.scrollY >= 30) {
-        setColor("#ffffff");
+        setColor("#faf9f6");
         setTextColor("#000000");
       } else {
         setColor("transparent");
@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className="fixed w-full flex justify-between shadow-black/10 shadow-sm items-center py-5 px-5 lg:px-36 text-white ease-in duration-300 z-20"
+      className="fixed w-full flex justify-between items-center py-5 px-5 lg:px-36 text-white ease-in duration-300 z-20"
     >
       <Link href="/" className="z-50">
         <div className="flex items-center justify-center gap-1">
