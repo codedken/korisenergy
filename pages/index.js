@@ -1,13 +1,13 @@
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { BsBriefcaseFill } from "react-icons/bs";
 import Contact from "../components/Contact";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
+  FaCheck,
 } from "react-icons/fa";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -97,20 +97,32 @@ export default function Home() {
           </div>
         </div>
         <About />
-        <div className="md:py-12 py-8 px-6 w-full bg-red-500 flex relative flex-col justify-center items-center">
-          <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-black opacity-30" />
-          <h3 className="lg:text-4xl md:text-2xl text-xl font-bold text-gray-100 relative underline">Testimonials</h3>
-          <q className="relative lg:my-10 my-8 text-gray-300 tracking-wide lg:w-[36rem] w-auto lg:text-3xl md:text-xl text-lg text-center">
-            It has been 2 years since Koris installed my solar system, and I
-            must confess that it is worth the money.
-          </q>
-          <div className="absolute bottom-4 right-4">
-            <p className="md:text-xl text-lg text-white font-bold">
-              Mr Kennedy Ojukwu
+        <div className="md:py-12 py-8 px-6 w-full bg-red-600 flex relative flex-col justify-center items-center ">
+          <div className="flex flex-col w-auto md:w-1/2">
+            <h2 className="mb-6 text-3xl font-bold text-gray-100 md:text-center underline">
+              Testimonials
+            </h2>
+            <p className="text-gray-200 lg:text-2xl md:text-xl text-lg md:text-center">
+              <q>
+                It has been 2 years since Koris installed my solar system, and I
+                must confess that it is worth the money.
+              </q>
             </p>
-            <p className="md:text-lg text-base text-gray-200">
-              CEO Kencode Comms
-            </p>
+            <button className="border-white active:bg-white active:text-gray-800 border md:mx-auto text-white text-base py-3 flex justify-center items-center gap-3 px-4 mt-4 font-bold">
+              <p>Give Koris A Remark</p>
+              <FaCheck size={18} />
+            </button>
+          </div>
+
+          <div className="w-full flex justify-end mt-4">
+            <div>
+              <p className="md:text-xl text-lg text-white font-bold">
+                Mr Kennedy Ojukwu
+              </p>
+              <p className="md:text-lg text-base text-gray-200">
+                CEO Kencode Comms
+              </p>
+            </div>
           </div>
         </div>
         <div className="relative w-full bg-gray-50 mt-2 md:px-36 py-12">

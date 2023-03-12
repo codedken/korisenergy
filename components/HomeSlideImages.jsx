@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const HomeSlideImages = () => {
-  const imageNames = ["panel0", "panel2", "battery2", "panel6", "panel0"];
+  const imageNames = ["panel0", "convertedimage1", "convertedimage3", "panel6", "panel0"];
 
   return (
     <div className="w-full h-screen overflow-x-clip absolute top-0 left-0">

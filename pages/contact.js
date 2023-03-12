@@ -16,7 +16,7 @@ const contact = () => {
             </h4>
             <h4 className="flex gap-3 text-gray-600 lg:text-xl text-lg">
               <FaEnvelope size={18}/>
-              customersupport@korisenergy.com
+              info@korisenergy.com
             </h4>
             <h4 className="flex gap-3 text-gray-600 lg:text-xl text-lg">
               <FaMapMarkerAlt size={18}/>
