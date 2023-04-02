@@ -10,6 +10,7 @@ const HomeSlideImages = () => {
           <Image
             src={`/korisimages/${name}.png`}
             key={i}
+            loading="eager"
             width={800}
             height={800}
             alt="Solar Panel"

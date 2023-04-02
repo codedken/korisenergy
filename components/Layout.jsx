@@ -1,9 +1,15 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Layout = ({ children }) => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsImageLoaded(true);
+    }, 4000)
+  })
   return (
     <div>
       <Head>
@@ -28,9 +34,18 @@ const Layout = ({ children }) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
+      {isImageLoaded ? (
+        <>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </>
+      ) : (
+        <div className="flex justify-center items-center bg-black h-screen w-screen gap-4">
+          <div className="animate-spin md:w-12 md:h-12 w-8 h-8 border-4 border-r-0 border-t-0 rounded-full"/>
+          <h3 className="md:text-4xl md:leading-10 text-lg leading-7 tracking-wider font-bold text-white">Welcome to KORIS<i>energy</i></h3>
+        </div>
+      )}
     </div>
   );
 };

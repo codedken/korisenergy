@@ -10,14 +10,20 @@ import {
   FaCheck,
 } from "react-icons/fa";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HomeSlideText from "../components/HomeSlideText";
 import HomeSlideImages from "../components/HomeSlideImages";
 import About from "../components/About";
 
 export default function Home() {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 3000 });
+
+    setTimeout(() => {
+      setIsImageLoaded(true);
+    }, 3000);
   }, []);
 
   return (
@@ -108,10 +114,16 @@ export default function Home() {
                 must confess that it is worth the money.
               </q>
             </p>
-            <button className="border-white active:bg-white active:text-gray-800 border md:mx-auto text-white text-base py-3 flex justify-center items-center gap-3 px-4 mt-4 font-bold">
-              <p>Give Koris A Remark</p>
-              <FaCheck size={18} />
-            </button>
+            <Link
+              href="https://forms.gle/w6bHeZraiWcu6Wpb8"
+              target="_b
+            "
+            >
+              <button className="border-white active:bg-white active:text-gray-800 border md:mx-auto text-white text-base py-3 flex justify-center items-center gap-3 px-4 mt-4 font-bold">
+                <p>Give Koris A Remark</p>
+                <FaCheck size={18} />
+              </button>
+            </Link>
           </div>
 
           <div className="w-full flex justify-end mt-4">
